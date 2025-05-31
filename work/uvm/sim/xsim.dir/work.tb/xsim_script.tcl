@@ -1,0 +1,1 @@
+xsim {work.tb} -testplusarg UVM_TESTNAME=top_test -testplusarg UVM_VERBOSITY=UVM_MEDIUM -wdb {/home/nami/time_alignment_2stage/work/uvm/wdb/tb.wdb} -autoloadwcfg -tclbatch {/home/nami/time_alignment_2stage/verification/uvm/scripts/vivado/run.tcl} -onfinish quit -onerror stop -stats -sv_seed 1

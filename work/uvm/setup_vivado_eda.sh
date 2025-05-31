@@ -1,0 +1,1 @@
+/home/nami/time_alignment_2stage/verification/uvm/scripts/setup/setup_vivado_eda.sh
