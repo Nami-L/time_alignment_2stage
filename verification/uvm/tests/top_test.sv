@@ -33,6 +33,7 @@ task top_test::run_phase(uvm_phase phase);
 //COLOCAMOS LOS SIGUIENTES COMANDOS PARA CORRER EL RUN
 phase.raise_objection(this);
 
+`uvm_info(get_name(),"Hola Namigtle",UVM_MEDIUM);
 phase.drop_objection(this);
 
 

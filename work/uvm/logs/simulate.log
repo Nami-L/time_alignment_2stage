@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Sun Jun  1 09:08:37 2025
-# Process ID         : 22613
+# Start of session at: Sun Jun  1 09:47:19 2025
+# Process ID         : 23850
 # Current directory  : /home/nami/time_alignment_2stage/work/uvm/sim
 # Command line       : xsim -log /home/nami/time_alignment_2stage/work/uvm/logs/simulate.log -mode tcl -source {xsim.dir/work.tb/xsim_script.tcl}
 # Log file           : /home/nami/time_alignment_2stage/work/uvm/logs/simulate.log
@@ -19,7 +19,7 @@
 # Host memory        : 8078 MB
 # Swap memory        : 2243 MB
 # Total Virtual      : 10322 MB
-# Available Virtual  : 6900 MB
+# Available Virtual  : 6806 MB
 #-----------------------------------------------------------
 source xsim.dir/work.tb/xsim_script.tcl
 # xsim {work.tb} -testplusarg UVM_TESTNAME=top_test -testplusarg UVM_VERBOSITY=UVM_MEDIUM -wdb {/home/nami/time_alignment_2stage/work/uvm/wdb/tb.wdb} -autoloadwcfg -tclbatch {/home/nami/time_alignment_2stage/verification/uvm/scripts/vivado/run.tcl} -onfinish quit -onerror stop -sv_seed 1
@@ -79,12 +79,13 @@ All types registered with the factory: 52 total
 
 
 UVM_INFO /tools/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0ns: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/tests/top_test.sv(36) @ 0ns: uvm_test_top [uvm_test_top] Hola Namigtle
 UVM_INFO /tools/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(19968) @ 0ns: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 UVM_INFO /tools/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(13673) @ 0ns: reporter [UVM/REPORT/SERVER] 
 --- UVM Report Summary ---
 
 ** Report counts by severity
-UVM_INFO :    7
+UVM_INFO :    8
 UVM_WARNING :    0
 UVM_ERROR :    0
 UVM_FATAL :    0
@@ -96,7 +97,8 @@ UVM_FATAL :    0
 [UVM/FACTORY/PRINT]     1
 [UVM/RELNOTES]     1
 [UVMTOP]     1
+[uvm_test_top]     1
 
 $finish called at time : 0 fs : File "/tools/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit 0
-INFO: [Common 17-206] Exiting xsim at Sun Jun  1 09:08:41 2025...
+INFO: [Common 17-206] Exiting xsim at Sun Jun  1 09:47:24 2025...
