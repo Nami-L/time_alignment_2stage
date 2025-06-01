@@ -5,6 +5,8 @@ package top_test_pkg;
   `include "uvm_macros.svh"
 
   import uvm_pkg::*;
+  
+  import top_env_pkg::*;
 
   `include "top_test.sv"
     

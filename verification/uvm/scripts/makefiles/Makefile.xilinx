@@ -59,7 +59,7 @@ endif
 # ==============================  TOOLS SETUP  ================================
 
 # Files
-RTL_FILES = $(RTL_DIR)/time_alignment_2stage.sv
+RTL_FILES = $(RTL_DIR)/timeAlign.sv
 SVE = -f $(UVM_DIR)/sve.f
 VERDI_FILE = $(VERDI_DIR)/verdi.tcl
 DPI_FILE = $(DPI_DIR)/external.o

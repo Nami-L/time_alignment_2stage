@@ -25,11 +25,11 @@ end
 
 
 //DEFININICION DE LA INTERFAZ
-// time_alignment_2stage_uvc_if t_a_2_vif(clk_i,reset_i);
+ timeAlign_uvc_if timeAlign_vif(clk_i,reset_i);
 
 //INSTANCIAR EL DUT
 
-time_alignment_2stage dut(
+timeAlign dut(
      .clk_i(),          // Reloj del sistema
      .reset_i(),        // reset_i (activo en alto)
      .msb_i(), // Bits de la etapa 1 (MSBs)
@@ -39,7 +39,7 @@ time_alignment_2stage dut(
 
 initial begin
 $timeformat(-9,0,"ns",10);
-//uvm_config_db#(virtual t_a_2_vif)::set(null,"uvm_test_top.m_env.m_adder_agent","vif",t_a_2_vif);
+//uvm_config_db#(virtual timeAlign_vif)::set(null,"uvm_test_top.m_env.m_adder_agent","vif",timeAlign_vif);
 
 run_test();
 end

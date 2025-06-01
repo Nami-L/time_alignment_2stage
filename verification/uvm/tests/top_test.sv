@@ -3,6 +3,8 @@
 
 class top_test extends uvm_test;
 `uvm_component_utils(top_test)
+//declaramos el objeto environment
+top_env m_env;
 
 
 extern function new(string name, uvm_component parent);
@@ -17,7 +19,8 @@ super.new(name, parent);
 endfunction:new
 
 function void top_test::build_phase(uvm_phase phase);
-
+//creamos el environment
+m_env = top_env::type_id::create("m_env",this);
 endfunction: build_phase
 
 function void top_test::end_of_elaboration_phase(uvm_phase phase);
