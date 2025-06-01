@@ -1,3 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nami/time_alignment_2stage/verification/uvm/sv/timeAlign_uvc_pkg.sv" into library work
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nami/time_alignment_2stage/verification/uvm/sv/timeAlign_uvc_if.sv" into library work
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nami/time_alignment_2stage/rtl/timeAlign.sv" into library work
 INFO: [VRFC 10-311] analyzing module timeAlign

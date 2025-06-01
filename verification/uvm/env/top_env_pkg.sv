@@ -6,6 +6,7 @@ package top_env_pkg;
   `include "uvm_macros.svh"
   import uvm_pkg::*;
 
+   import timeAlign_uvc_pkg::*;
   `include "top_env.sv"
 
 endpackage: top_env_pkg

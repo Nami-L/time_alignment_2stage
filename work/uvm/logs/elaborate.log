@@ -13,6 +13,7 @@ Time Resolution for simulation is 100ps
 Compiling package uvm.uvm_pkg
 Compiling package std.std
 Compiling package work.top_test_pkg
+Compiling package work.timeAlign_uvc_pkg
 Compiling package work.top_env_pkg
 Compiling module work.timeAlign_uvc_if_default
 Compiling module work.timeAlign
