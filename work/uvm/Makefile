@@ -1,1 +1,1 @@
-/home/nami/time_alignment_2stage/verification/uvm/scripts/makefiles/Makefile.xilinx
+/verification/uvm/scripts/makefiles/Makefile.xilinx

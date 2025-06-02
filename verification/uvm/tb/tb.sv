@@ -39,7 +39,7 @@ timeAlign dut(
 
 initial begin
 $timeformat(-9,0,"ns",10);
-//uvm_config_db#(virtual timeAlign_vif)::set(null,"uvm_test_top.m_env.m_adder_agent","vif",timeAlign_vif);
+uvm_config_db#(virtual timeAlign_uvc_if)::set(null,"uvm_test_top.m_env.m_timeAlign_agent","vif",timeAlign_vif);
 
 run_test();
 end

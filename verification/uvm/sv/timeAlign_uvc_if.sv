@@ -12,6 +12,12 @@ interface timeAlign_uvc_if
      logic [2:0] lsb_i; // Bits de la etapa 2 (LSBs)
      logic [5:0] dout_o;    // Salida alineada: {MSBs, LSBs}
 
+     initial begin
+       msb_i  = 'd0;
+       lsb_i  = 'd0;
+
+     end
+
 //                                [interface dut_if]
 //     +--------+         writes         +-------+         reads         +----------+
 //     | Driver | ---------------------> | DUT   | --------------------> | Monitor  |
