@@ -35,9 +35,19 @@ endclocking: cb_drv
 //EL MONITOR LEE LO QUE TENGA LA SALIDA DEL DUT, POR LO TANTO
 //ES UNA ENTRADA
 clocking cb_mon @(posedge clk_i);
+    default input #1ns output #1ns;
+
 input  dout_o;    // Salida alineada: {MSBs, LSBs}
 
 endclocking: cb_mon
+
+  clocking cb_drv_neg @(negedge clk_i);
+    default input #1ns output #1ns;
+
+input  dout_o;    // Salida alineada: {MSBs, LSBs}
+
+endclocking: cb_drv_neg
+
 
 endinterface:timeAlign_uvc_if
 

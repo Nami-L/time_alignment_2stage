@@ -8,13 +8,14 @@ package timeAlign_uvc_pkg;
 
 
   `include "timeAlign_uvc_sequence_item.sv"
+  `include "timeAlign_uvc_config.sv"
+  `include "timeAlign_uvc_sequencer.sv"
+
   `include "timeAlign_uvc_monitor.sv"
   `include "timeAlign_uvc_driver.sv"
-  `include "timeAlign_uvc_sequencer.sv"
-  `include "timeAlign_uvc_config.sv"
   `include "timeAlign_uvc_agent.sv"
 
-    // Sequence library
+  // Sequence library
   `include "timeAlign_uvc_sequence_base.sv"
 
 endpackage : timeAlign_uvc_pkg

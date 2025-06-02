@@ -46,13 +46,14 @@ endtask: run_phase
 task timeAlign_uvc_monitor::do_mon();
 
 forever begin
-  @(vif.cb_mon);
+  @(vif.msb_i);
+@(vif.cb_drv_neg);
 
   m_trans.m_msb = vif.msb_i;
   m_trans.m_lsb = vif.lsb_i;
   m_trans.m_dout = vif.dout_o;
 
-    `uvm_info(get_type_name(), {"\n ------ MONITOR (GPIO UVC) ------ ", m_trans.convert2string()}, UVM_DEBUG)
+    `uvm_info(get_type_name(), {"\n ------ MONITOR (TimeAlign UVC) ------ ", m_trans.convert2string()}, UVM_DEBUG)
 
 analysis_port.write(m_trans);
 end

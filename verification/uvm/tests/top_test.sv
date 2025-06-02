@@ -5,7 +5,7 @@ class top_test extends uvm_test;
 `uvm_component_utils(top_test)
 //declaramos el objeto environment
 top_env m_env;
-
+top_test_vseq vseq;
 
 extern function new(string name, uvm_component parent);
 extern function void build_phase(uvm_phase phase);
@@ -26,20 +26,17 @@ endfunction: build_phase
 function void top_test::end_of_elaboration_phase(uvm_phase phase);
 uvm_root::get().print_topology();
 uvm_factory::get().print();
-
 endfunction: end_of_elaboration_phase
 
 task top_test::run_phase(uvm_phase phase);
 //COLOCAMOS LOS SIGUIENTES COMANDOS PARA CORRER EL RUN
 phase.raise_objection(this);
 
-`uvm_info(get_name(),"Hola Namigtle",UVM_MEDIUM);
+//`uvm_info(get_name(),"Hola Namigtle",UVM_MEDIUM);
+vseq = top_test_vseq::type_id::create("vseq");
+vseq.start(m_env.vsqr);
 phase.drop_objection(this);
 
 
 endtask: run_phase
-
-
-
-
 `endif // TOP_TEST_SV

@@ -30,11 +30,11 @@ end
 //INSTANCIAR EL DUT
 
 timeAlign dut(
-     .clk_i(),          // Reloj del sistema
-     .reset_i(),        // reset_i (activo en alto)
-     .msb_i(), // Bits de la etapa 1 (MSBs)
-     .lsb_i(), // Bits de la etapa 2 (LSBs)
-     .dout_o()    // Salida alineada: {MSBs, LSBs}
+     .clk_i(timeAlign_vif.clk_i),          // Reloj del sistema
+     .reset_i(timeAlign_vif.reset_i),        // reset_i (activo en alto)
+     .msb_i(timeAlign_vif.msb_i), // Bits de la etapa 1 (MSBs)
+     .lsb_i(timeAlign_vif.lsb_i), // Bits de la etapa 2 (LSBs)
+     .dout_o(timeAlign_vif.dout_o)    // Salida alineada: {MSBs, LSBs}
 );
 
 initial begin

@@ -13,6 +13,8 @@ endclass: timeAlign_uvc_sequence_base
 
 function timeAlign_uvc_sequence_base::new(string name ="");
 super.new(name);
+m_trans = timeAlign_uvc_sequence_item::type_id::create("m_trans");
+
 endfunction:new
 
 task timeAlign_uvc_sequence_base::body();

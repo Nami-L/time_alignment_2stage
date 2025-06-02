@@ -36,6 +36,7 @@ if (!uvm_config_db#(timeAlign_uvc_config)::get(get_parent(), "", "config", m_con
 endfunction: build_phase
 
 task timeAlign_uvc_driver::run_phase(uvm_phase phase);
+forever begin
 //PIDE LA TRANSACTION AL SEQUENCER QUE YA GENERO EL SEQUENCE
 seq_item_port.get_next_item(req);
 //LAS SEÑALES QUE SE HAN OBTENIDO SE VAN AL DO_DRIVE
@@ -43,6 +44,7 @@ do_drive();
 //YA QUE TERMINO LA TAREA, LE DICE AL SEQUENCER QUE 
 //FINALIZO
 seq_item_port.item_done();
+end
 endtask: run_phase
 
 task timeAlign_uvc_driver::do_drive();

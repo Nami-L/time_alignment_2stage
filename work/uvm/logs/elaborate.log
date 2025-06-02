@@ -12,9 +12,11 @@ Completed simulation data flow analysis
 Time Resolution for simulation is 100ps
 Compiling package uvm.uvm_pkg
 Compiling package std.std
-Compiling package work.top_test_pkg
 Compiling package work.timeAlign_uvc_pkg
 Compiling package work.top_env_pkg
+Compiling package work.top_test_pkg
+Compiling module work.cb_drv
+Compiling module work.cb_drv_neg
 Compiling module work.timeAlign_uvc_if_default
 Compiling module work.timeAlign
 Compiling module work.tb

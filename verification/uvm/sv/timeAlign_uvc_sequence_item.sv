@@ -21,7 +21,7 @@ extern function string convert2string();
 endclass:timeAlign_uvc_sequence_item
 
 function timeAlign_uvc_sequence_item::new(string name ="");
-super.new();
+super.new(name);
 endfunction: new
 
 function void timeAlign_uvc_sequence_item::do_copy(uvm_object rhs);
