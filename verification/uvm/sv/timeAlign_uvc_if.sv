@@ -11,6 +11,7 @@ interface timeAlign_uvc_if
      logic [2:0] msb_i; // Bits de la etapa 1 (MSBs)
      logic [2:0] lsb_i; // Bits de la etapa 2 (LSBs)
      logic [5:0] dout_o;    // Salida alineada: {MSBs, LSBs}
+     logic [2:0] msb_o;
 
      initial begin
        msb_i  = 'd0;
@@ -38,7 +39,7 @@ clocking cb_mon @(posedge clk_i);
     default input #1ns output #1ns;
 
 input  dout_o;    // Salida alineada: {MSBs, LSBs}
-
+input msb_o;
 endclocking: cb_mon
 
   clocking cb_drv_neg @(negedge clk_i);
