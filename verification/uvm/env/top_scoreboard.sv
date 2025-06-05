@@ -9,7 +9,7 @@ class top_scoreboard extends uvm_scoreboard;
   extern function new(string name, uvm_component parent);
   extern function void build_phase(uvm_phase phase);
   extern function void report_phase(uvm_phase phase);
- // extern task run_phase(uvm_phase phase);
+  extern task run_phase(uvm_phase phase);
   extern function void write_timeAlign(input timeAlign_uvc_sequence_item t);
 
   int unsigned m_num_passed;
@@ -48,48 +48,39 @@ function void top_scoreboard::report_phase(uvm_phase phase);
 
 endfunction : report_phase
 
-// task top_scoreboard::run_phase(uvm_phase phase);
-//   string s;
-//   logic [5:0] Salida_esperada;
-//   forever begin
-//     wait (m_timeAlign_queue.size() > 0);  // Espera que haya elementos en la cola
+ task top_scoreboard::run_phase(uvm_phase phase);
+  string s;
+   forever begin
+     wait (m_timeAlign_queue.size() > 0);  // Espera que haya elementos en la cola
 
-//    // foreach (m_timeAlign_queue[i]) begin
+     foreach (m_timeAlign_queue[i]) begin
 
-// //  //     if(({m_timeAlign_queue[i].m_msb , m_timeAlign_queue[i].m_lsb}) ==m_timeAlign_queue[i].m_dout) begin
-//  //       m_num_passed = m_num_passed + 1;
-//  //     end else begin
-//  //       m_num_failed = m_num_failed + 1;
-//  //     end
-//  //   end
-
-//     //     if (m_timeAlign_queue[0].m_msb == (m_timeAlign_queue[1].m_msb )) begin
-//     //   m_num_passed++;
-//     // end else begin
-//     //   m_num_failed++;
-//     // end
-//     // end
-
-//     foreach (m_timeAlign_queue[i]) begin
-
-//       s = {
-//         s,
-//         $sformatf("\nTRANS[%3d]: \n ------ SCOREBOARD (ADDER UVC) ------  ", i),
-//         m_timeAlign_queue[i].convert2string(),
-//         "\n"
-//       };
-//     end
-//     `uvm_info(get_type_name(), s, UVM_DEBUG)
-//     s = "";
-
-//     m_timeAlign_queue.delete();
+      if(i >1 ) begin
+     if(({m_timeAlign_queue[i-1].m_msb , m_timeAlign_queue[i].m_lsb}) ==m_timeAlign_queue[i].m_dout) begin
+     m_num_passed = m_num_passed + 1;
+    end else begin
+     m_num_failed = m_num_failed + 1;
+    end
+   end
+     end
 
 
-//   end
+     foreach (m_timeAlign_queue[i]) begin
+       s = {
+         s,
+         $sformatf("\nTRANS[%3d]: \n ------ SCOREBOARD (ADDER UVC) ------  ", i),
+         m_timeAlign_queue[i].convert2string(),
+         "\n"
+       };
+     end
+     `uvm_info(get_type_name(), s, UVM_DEBUG)
+     s = "";
+     m_timeAlign_queue.delete();
+   end
 
 
 
-// endtask : run_phase
+ endtask : run_phase
 
 
 `endif  //TOP_SCOREBOARD_SV
