@@ -5,8 +5,7 @@ module timeAlign (
     input logic reset_i,        // reset_i (activo en alto)
     input logic [2:0] msb_i, // Bits de la etapa 1 (MSBs)
     input logic [2:0] lsb_i, // Bits de la etapa 2 (LSBs)
-    output logic [5:0] dout_o,    // Salida alineada: {MSBs, LSBs}
-    output logic [2:0] msb_o
+    output logic [5:0] dout_o   // Salida alineada: {MSBs, LSBs}
 );
 
     // Registro para almacenar los MSBs de la etapa 1
@@ -23,7 +22,5 @@ module timeAlign (
             dout_o <= {msb_reg, lsb_i};
         end
     end
-
-    assign msb_o= msb_reg;
 
 endmodule

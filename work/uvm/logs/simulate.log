@@ -3,10 +3,10 @@
 # SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Tue Jun  3 09:54:43 2025
-# Process ID         : 94792
+# Start of session at: Thu Jun  5 08:43:58 2025
+# Process ID         : 74469
 # Current directory  : /home/nami/time_alignment_2stage/work/uvm/sim
-# Command line       : xsim -log /home/nami/time_alignment_2stage/work/uvm/logs/simulate.log -mode tcl -source {xsim.dir/work.tb/xsim_script.tcl}
+# Command line       : xsim -log /home/nami/time_alignment_2stage/work/uvm/logs/simulate.log -source {xsim.dir/work.tb/xsim_script.tcl}
 # Log file           : /home/nami/time_alignment_2stage/work/uvm/logs/simulate.log
 # Journal file       : /home/nami/time_alignment_2stage/work/uvm/sim/xsim.jou
 # Running On         : nami-virtual-machine
@@ -19,10 +19,17 @@
 # Host memory        : 8078 MB
 # Swap memory        : 2243 MB
 # Total Virtual      : 10322 MB
-# Available Virtual  : 1378 MB
+# Available Virtual  : 6452 MB
 #-----------------------------------------------------------
+start_gui
 source xsim.dir/work.tb/xsim_script.tcl
-# xsim {work.tb} -testplusarg UVM_TESTNAME=top_test -testplusarg UVM_VERBOSITY=UVM_DEBUG -wdb {/home/nami/time_alignment_2stage/work/uvm/wdb/tb.wdb} -autoloadwcfg -tclbatch {/home/nami/time_alignment_2stage/verification/uvm/scripts/vivado/run.tcl} -onfinish quit -onerror stop -stats -sv_seed 1
+# set_param project.enableReportConfiguration 0
+# load_feature core
+# current_fileset
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.2/data/ip'.
+# xsim {work.tb} -testplusarg UVM_TESTNAME=top_test -testplusarg UVM_VERBOSITY=UVM_DEBUG -wdb {/home/nami/time_alignment_2stage/work/uvm/wdb/tb.wdb} -autoloadwcfg -tclbatch {/home/nami/time_alignment_2stage/verification/uvm/scripts/vivado/run.tcl} -onerror stop -stats -sv_seed 1
 Time resolution is 100 ps
 source /home/nami/time_alignment_2stage/verification/uvm/scripts/vivado/run.tcl
 ## set tclStart [clock seconds]
@@ -366,7 +373,14 @@ UVM_FATAL :    0
 [top_scoreboard]     2
 
 $finish called at time : 155 ns : File "/tools/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
-exit 0
-INFO: Simulation Memory Usage: 288324 KB (Peak: 330708 KB)
-INFO: Simulation CPU Usage: 1790 ms
-INFO: [Common 17-206] Exiting xsim at Tue Jun  3 09:54:51 2025...
+## if { [current_vcd -quiet] != ""} {
+##   flush_vcd [current_vcd]
+##   close_vcd [current_vcd]
+## }
+## puts "\[INFO\]: Simulation finished at [current_time]"
+[INFO]: Simulation finished at 155 ns
+## set tclStop [clock seconds]
+## set seconds [expr ${tclStop} - ${tclStart} ]
+## puts "\[INFO\]: Total elapsed-time for RUN: [format "%6.2f" [expr $seconds/1.0]] seconds"
+[INFO]: Total elapsed-time for RUN:   2.00 seconds
+xsim: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 11155.051 ; gain = 915.898 ; free physical = 1701 ; free virtual = 5383
