@@ -1,4 +1,0 @@
-Running: xsim.dir/work.tb/xsimk -wdb /home/nami/time_alignment_2stage/work/uvm/wdb/tb.wdb -sv_seed 1 -simmode gui -testplusarg UVM_TESTNAME=top_test -testplusarg UVM_VERBOSITY=UVM_DEBUG -simrunnum 0 -socket 60541
-Design successfully loaded
-Design Loading Memory Usage: 191448 KB (Peak: 191456 KB)
-Design Loading CPU Usage: 1510 ms

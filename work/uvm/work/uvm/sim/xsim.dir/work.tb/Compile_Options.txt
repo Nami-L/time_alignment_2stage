@@ -1,1 +1,0 @@
-"tb" -debug "all" -s "work.tb" -mt "10" -timescale "1ns/100ps" -L "work" -L "xil_defaultlib" -L "uvm" -override_timeunit -override_timeprecision -L "xpm" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -log "/home/nami/time_alignment_2stage/work/uvm/work/uvm/logs/elaborate.log" 
