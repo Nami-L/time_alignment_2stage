@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Thu Jun  5 08:43:58 2025
-# Process ID         : 74469
+# Start of session at: Thu Jun  5 08:53:50 2025
+# Process ID         : 76986
 # Current directory  : /home/nami/time_alignment_2stage/work/uvm/sim
 # Command line       : xsim -log /home/nami/time_alignment_2stage/work/uvm/logs/simulate.log -source {xsim.dir/work.tb/xsim_script.tcl}
 # Log file           : /home/nami/time_alignment_2stage/work/uvm/logs/simulate.log
@@ -19,7 +19,7 @@
 # Host memory        : 8078 MB
 # Swap memory        : 2243 MB
 # Total Virtual      : 10322 MB
-# Available Virtual  : 6452 MB
+# Available Virtual  : 6381 MB
 #-----------------------------------------------------------
 start_gui
 source xsim.dir/work.tb/xsim_script.tcl
@@ -29,7 +29,7 @@ source xsim.dir/work.tb/xsim_script.tcl
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.2/data/ip'.
-# xsim {work.tb} -testplusarg UVM_TESTNAME=top_test -testplusarg UVM_VERBOSITY=UVM_DEBUG -wdb {/home/nami/time_alignment_2stage/work/uvm/wdb/tb.wdb} -autoloadwcfg -tclbatch {/home/nami/time_alignment_2stage/verification/uvm/scripts/vivado/run.tcl} -onerror stop -stats -sv_seed 1
+# xsim {work.tb} -testplusarg UVM_TESTNAME=top_test -testplusarg UVM_VERBOSITY=UVM_DEBUG -wdb {/home/nami/time_alignment_2stage/work/uvm/wdb/tb.wdb} -autoloadwcfg -tclbatch {/home/nami/time_alignment_2stage/verification/uvm/scripts/vivado/run.tcl} -onerror stop -sv_seed 1
 Time resolution is 100 ps
 source /home/nami/time_alignment_2stage/verification/uvm/scripts/vivado/run.tcl
 ## set tclStart [clock seconds]
@@ -188,6 +188,13 @@ UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/sv/timeAlign_uvc_moni
 TRANSACTION INFORMATION (TimeAlign UVC):
 m_msb =     7, m_lsb =     5, m_dout =     0
 
+UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/env/top_scoreboard.sv(82) @ 40ns: uvm_test_top.m_env.m_timeAlign_scoreboard [top_scoreboard] 
+TRANS[  0]: 
+ ------ SCOREBOARD (ADDER UVC) ------  
+TRANSACTION INFORMATION (TimeAlign UVC):
+m_msb =     7, m_lsb =     5, m_dout =     0
+
+
 UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/sv/timeAlign_uvc_driver.sv(53) @ 45ns: uvm_test_top.m_env.m_timeAlign_agent.m_driver [timeAlign_uvc_driver] 
  ------ DRIVER (TimeAlign UVC) ------
 TRANSACTION INFORMATION (TimeAlign UVC):
@@ -197,6 +204,13 @@ UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/sv/timeAlign_uvc_moni
  ------ MONITOR (TimeAlign UVC) ------ 
 TRANSACTION INFORMATION (TimeAlign UVC):
 m_msb =     5, m_lsb =     2, m_dout =     5
+
+UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/env/top_scoreboard.sv(82) @ 50ns: uvm_test_top.m_env.m_timeAlign_scoreboard [top_scoreboard] 
+TRANS[  0]: 
+ ------ SCOREBOARD (ADDER UVC) ------  
+TRANSACTION INFORMATION (TimeAlign UVC):
+m_msb =     5, m_lsb =     2, m_dout =     5
+
 
 UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/sv/timeAlign_uvc_driver.sv(53) @ 55ns: uvm_test_top.m_env.m_timeAlign_agent.m_driver [timeAlign_uvc_driver] 
  ------ DRIVER (TimeAlign UVC) ------
@@ -208,6 +222,13 @@ UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/sv/timeAlign_uvc_moni
 TRANSACTION INFORMATION (TimeAlign UVC):
 m_msb =     4, m_lsb =     2, m_dout =    58
 
+UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/env/top_scoreboard.sv(82) @ 60ns: uvm_test_top.m_env.m_timeAlign_scoreboard [top_scoreboard] 
+TRANS[  0]: 
+ ------ SCOREBOARD (ADDER UVC) ------  
+TRANSACTION INFORMATION (TimeAlign UVC):
+m_msb =     4, m_lsb =     2, m_dout =    58
+
+
 UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/sv/timeAlign_uvc_driver.sv(53) @ 65ns: uvm_test_top.m_env.m_timeAlign_agent.m_driver [timeAlign_uvc_driver] 
  ------ DRIVER (TimeAlign UVC) ------
 TRANSACTION INFORMATION (TimeAlign UVC):
@@ -217,6 +238,13 @@ UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/sv/timeAlign_uvc_moni
  ------ MONITOR (TimeAlign UVC) ------ 
 TRANSACTION INFORMATION (TimeAlign UVC):
 m_msb =     3, m_lsb =     0, m_dout =    42
+
+UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/env/top_scoreboard.sv(82) @ 70ns: uvm_test_top.m_env.m_timeAlign_scoreboard [top_scoreboard] 
+TRANS[  0]: 
+ ------ SCOREBOARD (ADDER UVC) ------  
+TRANSACTION INFORMATION (TimeAlign UVC):
+m_msb =     3, m_lsb =     0, m_dout =    42
+
 
 UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/sv/timeAlign_uvc_driver.sv(53) @ 75ns: uvm_test_top.m_env.m_timeAlign_agent.m_driver [timeAlign_uvc_driver] 
  ------ DRIVER (TimeAlign UVC) ------
@@ -228,6 +256,13 @@ UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/sv/timeAlign_uvc_moni
 TRANSACTION INFORMATION (TimeAlign UVC):
 m_msb =     6, m_lsb =     2, m_dout =    32
 
+UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/env/top_scoreboard.sv(82) @ 80ns: uvm_test_top.m_env.m_timeAlign_scoreboard [top_scoreboard] 
+TRANS[  0]: 
+ ------ SCOREBOARD (ADDER UVC) ------  
+TRANSACTION INFORMATION (TimeAlign UVC):
+m_msb =     6, m_lsb =     2, m_dout =    32
+
+
 UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/sv/timeAlign_uvc_driver.sv(53) @ 85ns: uvm_test_top.m_env.m_timeAlign_agent.m_driver [timeAlign_uvc_driver] 
  ------ DRIVER (TimeAlign UVC) ------
 TRANSACTION INFORMATION (TimeAlign UVC):
@@ -237,6 +272,13 @@ UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/sv/timeAlign_uvc_moni
  ------ MONITOR (TimeAlign UVC) ------ 
 TRANSACTION INFORMATION (TimeAlign UVC):
 m_msb =     4, m_lsb =     1, m_dout =    26
+
+UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/env/top_scoreboard.sv(82) @ 90ns: uvm_test_top.m_env.m_timeAlign_scoreboard [top_scoreboard] 
+TRANS[  0]: 
+ ------ SCOREBOARD (ADDER UVC) ------  
+TRANSACTION INFORMATION (TimeAlign UVC):
+m_msb =     4, m_lsb =     1, m_dout =    26
+
 
 UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/sv/timeAlign_uvc_driver.sv(53) @ 95ns: uvm_test_top.m_env.m_timeAlign_agent.m_driver [timeAlign_uvc_driver] 
  ------ DRIVER (TimeAlign UVC) ------
@@ -248,6 +290,13 @@ UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/sv/timeAlign_uvc_moni
 TRANSACTION INFORMATION (TimeAlign UVC):
 m_msb =     6, m_lsb =     6, m_dout =    49
 
+UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/env/top_scoreboard.sv(82) @ 100ns: uvm_test_top.m_env.m_timeAlign_scoreboard [top_scoreboard] 
+TRANS[  0]: 
+ ------ SCOREBOARD (ADDER UVC) ------  
+TRANSACTION INFORMATION (TimeAlign UVC):
+m_msb =     6, m_lsb =     6, m_dout =    49
+
+
 UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/sv/timeAlign_uvc_driver.sv(53) @ 105ns: uvm_test_top.m_env.m_timeAlign_agent.m_driver [timeAlign_uvc_driver] 
  ------ DRIVER (TimeAlign UVC) ------
 TRANSACTION INFORMATION (TimeAlign UVC):
@@ -257,6 +306,13 @@ UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/sv/timeAlign_uvc_moni
  ------ MONITOR (TimeAlign UVC) ------ 
 TRANSACTION INFORMATION (TimeAlign UVC):
 m_msb =     7, m_lsb =     5, m_dout =    38
+
+UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/env/top_scoreboard.sv(82) @ 110ns: uvm_test_top.m_env.m_timeAlign_scoreboard [top_scoreboard] 
+TRANS[  0]: 
+ ------ SCOREBOARD (ADDER UVC) ------  
+TRANSACTION INFORMATION (TimeAlign UVC):
+m_msb =     7, m_lsb =     5, m_dout =    38
+
 
 UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/sv/timeAlign_uvc_driver.sv(53) @ 115ns: uvm_test_top.m_env.m_timeAlign_agent.m_driver [timeAlign_uvc_driver] 
  ------ DRIVER (TimeAlign UVC) ------
@@ -268,6 +324,13 @@ UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/sv/timeAlign_uvc_moni
 TRANSACTION INFORMATION (TimeAlign UVC):
 m_msb =     2, m_lsb =     3, m_dout =    53
 
+UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/env/top_scoreboard.sv(82) @ 120ns: uvm_test_top.m_env.m_timeAlign_scoreboard [top_scoreboard] 
+TRANS[  0]: 
+ ------ SCOREBOARD (ADDER UVC) ------  
+TRANSACTION INFORMATION (TimeAlign UVC):
+m_msb =     2, m_lsb =     3, m_dout =    53
+
+
 UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/sv/timeAlign_uvc_driver.sv(53) @ 125ns: uvm_test_top.m_env.m_timeAlign_agent.m_driver [timeAlign_uvc_driver] 
  ------ DRIVER (TimeAlign UVC) ------
 TRANSACTION INFORMATION (TimeAlign UVC):
@@ -277,6 +340,13 @@ UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/sv/timeAlign_uvc_moni
  ------ MONITOR (TimeAlign UVC) ------ 
 TRANSACTION INFORMATION (TimeAlign UVC):
 m_msb =     5, m_lsb =     4, m_dout =    59
+
+UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/env/top_scoreboard.sv(82) @ 130ns: uvm_test_top.m_env.m_timeAlign_scoreboard [top_scoreboard] 
+TRANS[  0]: 
+ ------ SCOREBOARD (ADDER UVC) ------  
+TRANSACTION INFORMATION (TimeAlign UVC):
+m_msb =     5, m_lsb =     4, m_dout =    59
+
 
 UVM_INFO /tools/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(19948) @ 155ns: reporter [TEST_DONE] All end-of-test objections have been dropped. Calling stop tasks
 UVM_INFO /tools/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(19968) @ 155ns: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
@@ -288,72 +358,12 @@ UVM_INFO /tools/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_packag
 UVM_INFO /tools/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(24244) @ 155ns: uvm_test_top.m_env.m_timeAlign_agent.m_sequencer [PHASESEQ] No default sequence to kill for phase 'run'
 UVM_INFO /tools/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(24244) @ 155ns: uvm_test_top.m_env.vsqr [PHASESEQ] No default sequence to kill for phase 'run'
 UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/env/top_scoreboard.sv(45) @ 155ns: uvm_test_top.m_env.m_timeAlign_scoreboard [top_scoreboard] 
-TRANS[  1]: 
-
-TRANSACTION INFORMATION (TimeAlign UVC):
-m_msb =     7, m_lsb =     5, m_dout =     0
-
-
-TRANS[  2]: 
-
-TRANSACTION INFORMATION (TimeAlign UVC):
-m_msb =     5, m_lsb =     2, m_dout =     5
-
-
-TRANS[  3]: 
-
-TRANSACTION INFORMATION (TimeAlign UVC):
-m_msb =     4, m_lsb =     2, m_dout =    58
-
-
-TRANS[  4]: 
-
-TRANSACTION INFORMATION (TimeAlign UVC):
-m_msb =     3, m_lsb =     0, m_dout =    42
-
-
-TRANS[  5]: 
-
-TRANSACTION INFORMATION (TimeAlign UVC):
-m_msb =     6, m_lsb =     2, m_dout =    32
-
-
-TRANS[  6]: 
-
-TRANSACTION INFORMATION (TimeAlign UVC):
-m_msb =     4, m_lsb =     1, m_dout =    26
-
-
-TRANS[  7]: 
-
-TRANSACTION INFORMATION (TimeAlign UVC):
-m_msb =     6, m_lsb =     6, m_dout =    49
-
-
-TRANS[  8]: 
-
-TRANSACTION INFORMATION (TimeAlign UVC):
-m_msb =     7, m_lsb =     5, m_dout =    38
-
-
-TRANS[  9]: 
-
-TRANSACTION INFORMATION (TimeAlign UVC):
-m_msb =     2, m_lsb =     3, m_dout =    53
-
-
-TRANS[ 10]: 
-
-TRANSACTION INFORMATION (TimeAlign UVC):
-m_msb =     5, m_lsb =     4, m_dout =    59
-
-
 UVM_INFO /home/nami/time_alignment_2stage/verification/uvm/env/top_scoreboard.sv(47) @ 155ns: uvm_test_top.m_env.m_timeAlign_scoreboard [top_scoreboard] PASSED =   0, FAILED =   0
 UVM_INFO /tools/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(13673) @ 155ns: reporter [UVM/REPORT/SERVER] 
 --- UVM Report Summary ---
 
 ** Report counts by severity
-UVM_INFO :   96
+UVM_INFO :  106
 UVM_WARNING :    0
 UVM_ERROR :    0
 UVM_FATAL :    0
@@ -370,7 +380,7 @@ UVM_FATAL :    0
 [UVMTOP]     1
 [timeAlign_uvc_driver]    10
 [timeAlign_uvc_monitor]    10
-[top_scoreboard]     2
+[top_scoreboard]    12
 
 $finish called at time : 155 ns : File "/tools/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 ## if { [current_vcd -quiet] != ""} {
@@ -383,4 +393,4 @@ $finish called at time : 155 ns : File "/tools/Xilinx/Vivado/2024.2/data/system_
 ## set seconds [expr ${tclStop} - ${tclStart} ]
 ## puts "\[INFO\]: Total elapsed-time for RUN: [format "%6.2f" [expr $seconds/1.0]] seconds"
 [INFO]: Total elapsed-time for RUN:   2.00 seconds
-xsim: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 11155.051 ; gain = 915.898 ; free physical = 1701 ; free virtual = 5383
+xsim: Time (s): cpu = 00:00:11 ; elapsed = 00:00:05 . Memory (MB): peak = 11144.977 ; gain = 905.898 ; free physical = 1574 ; free virtual = 5288
