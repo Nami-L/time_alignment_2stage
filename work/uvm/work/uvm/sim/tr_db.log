@@ -1,6 +1,0 @@
-  CREATE_STREAM @0ns {NAME:vseq T:Transactions SCOPE:uvm_test_top.m_env.vsqr STREAM:749}
-  CREATE_STREAM @30ns {NAME:seq T:Transactions SCOPE:uvm_test_top.m_env.m_timeAlign_agent.m_sequencer STREAM:917}
-  CREATE_STREAM @0ns {NAME:vseq T:Transactions SCOPE:uvm_test_top.m_env.vsqr STREAM:749}
-  CREATE_STREAM @30ns {NAME:seq T:Transactions SCOPE:uvm_test_top.m_env.m_timeAlign_agent.m_sequencer STREAM:917}
-  CREATE_STREAM @0ns {NAME:vseq T:Transactions SCOPE:uvm_test_top.m_env.vsqr STREAM:749}
-  CREATE_STREAM @30ns {NAME:seq T:Transactions SCOPE:uvm_test_top.m_env.m_timeAlign_agent.m_sequencer STREAM:917}
