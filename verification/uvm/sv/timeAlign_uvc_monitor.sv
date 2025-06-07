@@ -13,6 +13,7 @@ timeAlign_uvc_sequence_item m_trans;
 
 logic [2:0] tem_msb;
 logic [2:0] tem_lsb;
+//logic [5:0] tem_dout;
 
 extern function new(string name, uvm_component parent);
 extern function void build_phase(uvm_phase phase);
@@ -52,11 +53,12 @@ endtask: run_phase
 task timeAlign_uvc_monitor::do_mon();
 
 forever begin
-tem_lsb = vif.msb_i;
-tem_msb = vif.lsb_i;
+tem_lsb = vif.lsb_i;
+tem_msb = vif.msb_i;
+//tem_dout = vif.dout_o;
 @(vif.cb_drv);
 
-if((tem_lsb != vif.msb_i) || (tem_msb != vif.lsb_i))begin
+if((tem_lsb != vif.lsb_i) || (tem_msb != vif.msb_i))begin
 
   m_trans.m_msb = vif.msb_i;
   m_trans.m_lsb = vif.lsb_i;
