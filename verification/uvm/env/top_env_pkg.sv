@@ -9,6 +9,7 @@ package top_env_pkg;
 
 
   `include "top_vsqr.sv"
+  `include "top_scoreboard.sv"
   `include "top_env.sv"
 
 endpackage : top_env_pkg
