@@ -47,8 +47,12 @@ endtask: run_phase
 task timeAlign_uvc_monitor::do_mon();
 
 forever begin
-  @(vif.msb_i);
-@(vif.cb_drv_neg);
+tem_lsb = vif.lsb_i;
+tem_msb = vif.msb_i;
+tem_dout = vif.dout_o;
+@(vif.cb_drv);
+//CONDICION
+if((tem_lsb != vif.lsb_i) || (tem_msb != vif.msb_i) || (tem_dout != vif.dout_o))begin
 
   m_trans.m_msb = vif.msb_i;
   m_trans.m_lsb = vif.lsb_i;
