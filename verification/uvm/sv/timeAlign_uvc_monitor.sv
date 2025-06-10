@@ -9,6 +9,12 @@ virtual timeAlign_uvc_if vif;
 timeAlign_uvc_config m_config;
 timeAlign_uvc_sequence_item m_trans;
 
+//CREAR VARIABLES TEMPORALES
+
+logic [2:0] tem_msb;
+logic [2:0] tem_lsb;
+//logic [5:0] tem_dout;
+
 extern function new(string name, uvm_component parent);
 extern function void build_phase(uvm_phase phase);
 extern task run_phase(uvm_phase phase);
@@ -49,10 +55,10 @@ task timeAlign_uvc_monitor::do_mon();
 forever begin
 tem_lsb = vif.lsb_i;
 tem_msb = vif.msb_i;
-tem_dout = vif.dout_o;
+//tem_dout = vif.dout_o;
 @(vif.cb_drv);
-//CONDICION
-if((tem_lsb != vif.lsb_i) || (tem_msb != vif.msb_i) || (tem_dout != vif.dout_o))begin
+//|| (tem_dout != vif.dout_o)
+if((tem_lsb != vif.lsb_i) || (tem_msb != vif.msb_i) )begin
 
   m_trans.m_msb = vif.msb_i;
   m_trans.m_lsb = vif.lsb_i;
