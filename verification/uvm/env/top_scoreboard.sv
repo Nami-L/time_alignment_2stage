@@ -69,9 +69,18 @@ endfunction : report_phase
 
       if (NP == m_timeAlign_queue[2].m_dout) begin
         m_num_passed++;
+         `uvm_info(get_type_name(),
+    $sformatf("PASS: NP = %0b (msb=%0b, lsb=%0b), dout = %0b",
+              NP, m_timeAlign_queue[0].m_msb, m_timeAlign_queue[1].m_lsb,
+              m_timeAlign_queue[2].m_dout),
+    UVM_LOW)
       end else begin
         m_num_failed++;
-        
+         `uvm_info(get_type_name(),
+    $sformatf("FAIL: NP = %0b (msb=%0b, lsb=%0b), dout = %0b",
+              NP, m_timeAlign_queue[0].m_msb, m_timeAlign_queue[1].m_lsb,
+              m_timeAlign_queue[2].m_dout),
+    UVM_LOW)
       end
 
    foreach (m_timeAlign_queue[i]) begin

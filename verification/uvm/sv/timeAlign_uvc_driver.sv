@@ -57,7 +57,7 @@ task timeAlign_uvc_driver::do_drive();
 
 vif.cb_drv.lsb_i <= req.m_lsb;
 vif.cb_drv.msb_i <= req.m_msb;
-
+//@(vif.cb_drv);
 endtask: do_drive
 
 
