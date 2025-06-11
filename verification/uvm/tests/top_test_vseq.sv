@@ -46,7 +46,7 @@ task top_test_vseq::body();
   end
 
   // Drain time
-  #(100ns);
+  #(0ns);
 
 endtask : body
 
