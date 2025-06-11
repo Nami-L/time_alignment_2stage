@@ -63,11 +63,11 @@ endfunction : report_phase
     //       m_num_failed++;
     //     end
     //   end
-      wait (m_timeAlign_queue.size() == 3);
+      wait (m_timeAlign_queue.size() == 2);
          NP = {m_timeAlign_queue[0].m_msb, m_timeAlign_queue[1].m_lsb};
       //`uvm_info(get_type_name(), $sformatf("NP = %0d", NP), UVM_LOW)
 
-      if (NP == m_timeAlign_queue[2].m_dout) begin
+      if (NP == m_timeAlign_queue[1].m_dout) begin
         m_num_passed++;
       end else begin
         m_num_failed++;

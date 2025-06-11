@@ -11,7 +11,7 @@ class timeAlign_uvc_monitor extends uvm_monitor;
 
   logic [2:0] tem_msb;
   logic [2:0] tem_lsb;
-  logic [5:0] tem_dout;
+  //logic [5:0] tem_dout;
 
 
   extern function new(string name, uvm_component parent);
@@ -54,10 +54,10 @@ task timeAlign_uvc_monitor::do_mon();
   forever begin
     tem_lsb  = vif.lsb_i;
     tem_msb  = vif.msb_i;
-    tem_dout = vif.dout_o;
+    //tem_dout = vif.dout_o;
     @(vif.cb_drv);
     //|| (tem_dout != vif.dout_o)
-    if ((tem_lsb != vif.lsb_i) || (tem_msb != vif.msb_i) || (tem_dout != vif.dout_o)) begin
+    if ((tem_lsb != vif.lsb_i) || (tem_msb != vif.msb_i) ) begin
 
       m_trans.m_msb  = vif.msb_i;
       m_trans.m_lsb  = vif.lsb_i;
