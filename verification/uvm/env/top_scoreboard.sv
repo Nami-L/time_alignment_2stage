@@ -71,6 +71,7 @@ endfunction : report_phase
         m_num_passed++;
       end else begin
         m_num_failed++;
+        
       end
 
    foreach (m_timeAlign_queue[i]) begin
