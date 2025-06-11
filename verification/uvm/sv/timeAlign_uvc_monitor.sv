@@ -57,7 +57,7 @@ task timeAlign_uvc_monitor::do_mon();
     //tem_dout = vif.dout_o;
     @(vif.cb_drv);
     //|| (tem_dout != vif.dout_o)
-    if ((tem_lsb != vif.lsb_i) || (tem_msb != vif.msb_i) ) begin
+    if ((tem_lsb != vif.lsb_i) || (tem_msb != vif.msb_i)) begin
 
       m_trans.m_msb  = vif.msb_i;
       m_trans.m_lsb  = vif.lsb_i;
