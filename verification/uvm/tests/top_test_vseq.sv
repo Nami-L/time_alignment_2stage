@@ -25,8 +25,8 @@ seq = timeAlign_uvc_sequence_base::type_id::create("seq");
         // creado dentro de la clase uvc_sequence_base
 
         //el objeto es m_tras y accedemos al item
-        m_trans.m_msb inside {[0 :8]};
-        m_trans.m_lsb inside {[0 :8 ]};
+        m_trans.m_msb inside {[0 :7]};
+        m_trans.m_lsb inside {[0 :7 ]};
 
       }))
     `uvm_fatal("RAND_ERROR", "Randomization error!")
@@ -40,12 +40,13 @@ task top_test_vseq::body();
   // Initial delay
   #(30ns);
 
-  repeat (5) begin
+  repeat (1000) begin
     timeAlign_rand_seq();
+    //#(10ns);
   end
 
   // Drain time
-  #(30ns);
+  #(100ns);
 
 endtask : body
 
