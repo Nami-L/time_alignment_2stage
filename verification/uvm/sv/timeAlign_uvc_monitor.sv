@@ -57,8 +57,8 @@ tem_lsb = vif.lsb_i;
 tem_msb = vif.msb_i;
 tem_dout = vif.dout_o;
 @(vif.cb_drv);
-//CONDICION
-if((tem_lsb != vif.lsb_i) || (tem_msb != vif.msb_i) || (tem_dout != vif.dout_o))begin
+//|| (tem_dout != vif.dout_o)
+if((tem_lsb != vif.lsb_i) || (tem_msb != vif.msb_i) || (tem_dout != vif.dout_o) )begin
 
   m_trans.m_msb = vif.msb_i;
   m_trans.m_lsb = vif.lsb_i;
@@ -68,8 +68,6 @@ if((tem_lsb != vif.lsb_i) || (tem_msb != vif.msb_i) || (tem_dout != vif.dout_o))
 
 analysis_port.write(m_trans);
 end
-
-
 
 end
 
