@@ -14,6 +14,10 @@ logic [2:0] tem_lsb;
 logic [5:0] tem_dout;
 
 
+logic [2:0] tem_msb;
+logic [2:0] tem_lsb;
+logic [5:0] tem_dout;
+
 extern function new(string name, uvm_component parent);
 extern function void build_phase(uvm_phase phase);
 extern task run_phase(uvm_phase phase);

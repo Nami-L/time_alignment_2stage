@@ -7,6 +7,7 @@ class top_env extends uvm_env;
 timeAlign_uvc_agent m_timeAlign_agent;
 timeAlign_uvc_config m_timeAlign_config;
 top_scoreboard m_scoreboard;
+top_coverage m_coverage;
 top_vsqr vsqr;
 
 extern function new(string name, uvm_component parent);
@@ -33,14 +34,21 @@ vsqr = top_vsqr::type_id::create("vsqr",this);
 
 //CREAMOS EL SCOREBOARD
 m_scoreboard = top_scoreboard::type_id::create("m_timeAlign_scoreboard",this);
+
+//CREAMOS EL COVERAGE
+m_coverage = top_coverage::type_id::create("m_timeAlign_coverage",this);
+
 endfunction:build_phase
 
 function void top_env ::connect_phase(uvm_phase phase);
 vsqr.m_timeAlign_sequencer = m_timeAlign_agent.m_sequencer;
 
 // CONECTAMOS EL SCOREBOARD AL AGENTE, EL ANALYSIS PORT
-
 m_timeAlign_agent.analysis_port.connect(m_scoreboard.timeAlign_imp_export);
+
+//CONECTAMOS EL COVERGAE AL AGENTE: ANALISIS PORT
+m_timeAlign_agent.analysis_port.connect(m_coverage.timeAlign_imp_export);
+
 
 endfunction
 
