@@ -9,6 +9,11 @@ virtual timeAlign_uvc_if vif;
 timeAlign_uvc_config m_config;
 timeAlign_uvc_sequence_item m_trans;
 
+logic [2:0] tem_msb;
+logic [2:0] tem_lsb;
+logic [5:0] tem_dout;
+
+
 extern function new(string name, uvm_component parent);
 extern function void build_phase(uvm_phase phase);
 extern task run_phase(uvm_phase phase);
