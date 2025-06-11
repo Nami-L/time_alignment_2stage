@@ -15,6 +15,7 @@ timeAlign_uvc_sequence_item m_trans;
     cp_msb: coverpoint m_trans.m_msb{bins msb_bin[]={[0:7]};}
     cp_lsb: coverpoint m_trans.m_lsb{bins lsb_bin[]={[0:7]};}
     //cp_msb: coverpoint m_trans.m_msb{bins msb_bin[]={[0:7]}}
+        cp_cross: cross m_trans.m_msb, m_trans.m_lsb;
 
     endgroup
 
@@ -45,6 +46,7 @@ endfunction : write_timeAlign
 
 function void top_coverage :: report_phase(uvm_phase phase);
   `uvm_info(get_type_name(), $sformatf("FINAL Coverage Score = %3.1f%%", m_cov.get_coverage()), UVM_DEBUG)
+// Imprimir detalle de los bins de cada coverpoint
 
 endfunction:report_phase
 
