@@ -40,7 +40,7 @@ task top_test_vseq::body();
   // Initial delay
   #(30ns);
 
-  repeat (3) begin
+  repeat (1000) begin
     timeAlign_rand_seq();
     //#(10ns);
   end
